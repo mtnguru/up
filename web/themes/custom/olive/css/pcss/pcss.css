@@ -1,0 +1,27 @@
+
+.customer-branding {
+  line-height: 1.1;
+}
+.customer-branding .customer-name {
+  display: inline-block;
+  max-width: 300px;
+}
+.customer-branding .customer-name h2 {
+  line-height: 1.1;
+}
+.customer-branding .customer-logo {
+  padding-left: 20px;
+  display: inline-block;
+  width: 300px;
+}
+.customer-branding .customer-logo img {
+  width: 100%;
+}
+
+#block-olive-page-title {
+  display: none;
+}
+
+.main-content__container {
+  padding-top: 1rem;
+}

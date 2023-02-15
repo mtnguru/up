@@ -1,0 +1,4 @@
+name: Ticket2
+type: module
+description: 'One of many attempts to create a ticket entity'
+core_version_requirement: '^8 || ^9'

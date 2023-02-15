@@ -1,0 +1,12 @@
+entity.ticket2video.add:
+  title: 'Add Ticket2 Video'
+  route_name: entity.ticket2video.add_form
+  weight: 15
+  appears_on:
+    - entity.ticket2video.collection
+entity.ticket2.add:
+  title: 'Add Ticket2'
+  route_name: entity.ticket2.add_page
+  weight: 15
+  appears_on:
+    - entity.ticket2.collection

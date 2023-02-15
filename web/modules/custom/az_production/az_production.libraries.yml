@@ -1,0 +1,36 @@
+az-video-player:
+  js:
+#   https://cdn.jsdelivr.net/gh/mattfarina/farbtastic@1.3u/farbtastic.js: { external: true }
+    
+    node_modules/video.js/dist/video.min.js: {}
+
+    js/az_video_player.js: {}
+    js/video-player.js: {}
+
+
+#   <!--script src="videojs-captions-toggle.js: {}
+#   <!--script src="https://vjs.zencdn.net/7.21.1/video.min.js"></script-->
+#   <!--script>videojs(document.querySelector('my-video')).captionsToggle();</script-->
+
+    node_modules/videojs-vtt.js/dist/vtt.min.js: {}
+    node_modules/videojs-hotkeys/videojs.hotkeys.min.js: {}
+    node_modules/videojs-dotsub-captions/dist/videojs-dotsub-captions.js: {}
+    node_modules/videojs-language-switch/dist/videojs-language-switch.js: {}
+    node_modules/videojs-auto-caption/dist/videojs-auto-caption.js: {}
+    node_modules/@filmgardi/videojs-quality-selector/dist/videojs-quality-selector.js: {}
+    node_modules/@viostream/videojs-captions-menu/dist/videojs-captions-menu.js: {}
+
+  css:
+    base:
+      css/az_video_player.css: {}
+      node_modules/videojs-dotsub-captions/dist/videojs-dotsub-captions.css: {}
+      node_modules/videojs-language-switch/dist/videojs-language-switch.css: {}
+      node_modules/@filmgardi/videojs-quality-selector/dist/videojs-quality-selector.css: {}
+      node_modules/@viostream/videojs-captions-menu/dist/videojs-captions-menu.css: {}
+      https://unpkg.com/video.js@7/dist/video-js.min.css: { external: true } 
+      https://unpkg.com/@videojs/themes@1/dist/city/index.css: { external: true }
+      https://unpkg.com/@videojs/themes@1/dist/fantasy/index.css: { external: true }
+      https://unpkg.com/@videojs/themes@1/dist/forest/index.css:  { external: true }
+      https://unpkg.com/@videojs/themes@1/dist/sea/index.css: { external: true }
+
+

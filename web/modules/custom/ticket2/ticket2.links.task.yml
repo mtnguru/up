@@ -1,0 +1,21 @@
+entity.ticket2video.edit_form:
+  title: Edit
+  route_name: entity.ticket2video.edit_form
+  base_route: entity.ticket2video.edit_form
+entity.ticket2.collection:
+  title: Ticket2s
+  route_name: entity.ticket2.collection
+  base_route: system.admin_content
+  weight: 15
+entity.ticket2.canonical:
+  title: View
+  route_name: entity.ticket2.canonical
+  base_route: entity.ticket2.canonical
+entity.ticket2.edit_form:
+  title: Edit
+  route_name: entity.ticket2.edit_form
+  base_route: entity.ticket2.canonical
+entity.ticket2.delete_form:
+  title: Delete
+  route_name: entity.ticket2.delete_form
+  base_route: entity.ticket2.canonical

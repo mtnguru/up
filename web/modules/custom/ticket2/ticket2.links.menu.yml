@@ -1,0 +1,5 @@
+entity.ticket2video.collection:
+  title: 'Ticket2 Videos'
+  description: 'Create and manage fields, forms, and display settings for Ticket2 Videos.'
+  route_name: entity.ticket2video.collection
+  parent: system.admin_structure

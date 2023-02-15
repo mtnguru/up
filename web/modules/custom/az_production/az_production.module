@@ -1,0 +1,96 @@
+<?php
+
+/**
+ * @file
+ * Contains az_production.module..
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_help().
+ */
+function az_production_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the az_production module.
+    case 'help.page.az_production':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Display videos in my own HTML 5 JavaScript window') . '</p>';
+      $output .= '<ul>';
+      $output .= '<li>'. t('Display streaming video') . '</li>';
+      $output .= '<li>'. t('Display Slido sidebar') . '</li>';
+      $output .= '<li>'. t('Provide Closed Captions') . '</li>';
+      $output .= '</ul>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function az_production_preprocess_page(&$variables) {
+  if (isset($variables['node'])) {
+//  $variables['#attached']['library'][] = 'az_production/az-video-player';
+    $node = $variables['node'];
+    switch ($node->getType()) {
+      case "event":
+        $variables['shit'] = 'crappped';
+        $prod_nid = $node->field_production->target_id;
+        $prod = \Drupal::entityTypeManager()->getStorage('node')->load($prod_nid);
+        $cust_nid = $prod->field_customer->target_id;
+        $cust = \Drupal::entityTypeManager()->getStorage('node')->load($cust_nid);
+        $logo_nid = $cust->field_company_logo->target_id;
+        $logo = \Drupal::entityTypeManager()->getStorage('file')->load($logo_nid);
+        $logo_uri = $logo->uri->value;
+        $variables['logo_uri'] = $logo_uri;
+        $variables['logo_url'] = file_create_url($logo_uri);
+        $variables['customer_name'] = $cust->getTitle();
+        $variables['logo_nid'] = $logo_nid;
+
+        break;
+      case "production":
+        // ...
+        break;
+      case "customer":
+        // ...
+        break;
+    }
+  }
+
+  return;
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function az_production_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  switch ($node->getType()) {
+    case "event":
+//    $video = $node->field_video
+
+      $variables['#attached']['library'][] = 'az_production/az-video-player';
+      $variables['shit'] = 'crappy';
+      break;
+    case "production":
+      // ...
+      break;
+    case "customer":
+      // ...
+      break;
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function az_production_preprocess_block(&$variables) {
+  return;
+}
+
+

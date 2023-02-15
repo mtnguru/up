@@ -1,0 +1,22 @@
+name: iframe
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - iframe/base
+  - iframe/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - iframe/user
+  core/drupal.dropbutton:
+    - iframe/dropbutton
+  core/drupal.dialog:
+    - iframe/dialog
+  file/drupal.file:
+    - iframe/file
+  core/drupal.progress:
+    - iframe/progress
+core_version_requirement: ^9
+generator: 'starterkit_theme:9.5.2'

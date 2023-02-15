@@ -1,0 +1,6 @@
+name: AZ Production
+type: module
+description: Display and control videosDisplay and control videos
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: AZ
